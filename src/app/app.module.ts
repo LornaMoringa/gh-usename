@@ -7,6 +7,7 @@ import { NavComponent } from './nav/nav.component';
 import { GitHubComponent } from './git-hub/git-hub.component';
 import { AboutComponent } from './about/about.component';
 import { FormComponent } from './form/form.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormComponent } from './form/form.component';
     NavComponent,
     GitHubComponent,
     AboutComponent,
-    FormComponent
+    FormComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
