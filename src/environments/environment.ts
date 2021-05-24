@@ -4,8 +4,9 @@
 
 export const environment = {
   production: true,
-  apiKey:"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"
+  apiKey:'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'
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

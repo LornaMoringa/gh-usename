@@ -5,6 +5,7 @@ import { environment } from '../environments/environment'
 import { Repositories } from './repositories'
 import { from } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -29,7 +30,7 @@ export class GitsearchService {
         public_gists: any,
     }
     let searchPoint = 'https://api.github.com/users/' + term + '?access_token=' + environment.apiKey;
-    let promise = new Promise((resolve, reject) => {
+    let promise = new Promise<void>((resolve, reject) => {
       this.http.get<ApiResponse>(searchPoint).toPromise().then(
         (results) => {
           this.user = results;
@@ -54,7 +55,7 @@ export class GitsearchService {
       forks:number,
     }
     let searchPoint = 'https://api.github.com/users/' + term + '/repos?access_token=' + environment.apiKey;
-    let promise = new Promise((resolve, reject) => {
+    let promise = new Promise<void>((resolve, reject) => {
       this.http.get<ApiResponse>(searchPoint).toPromise().then(
         (repoResults) => {
           this.repositories = repoResults;
