@@ -8,6 +8,7 @@ import { GitHubComponent } from './git-hub/git-hub.component';
 import { AboutComponent } from './about/about.component';
 import { FormComponent } from './form/form.component';
 import { HighlightDirective } from './highlight.directive';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HighlightDirective } from './highlight.directive';
     GitHubComponent,
     AboutComponent,
     FormComponent,
-    HighlightDirective
+    HighlightDirective,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
