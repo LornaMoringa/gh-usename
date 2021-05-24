@@ -29,7 +29,7 @@ export class GitsearchService {
         html_url: any,
         public_gists: any,
     }
-    let searchPoint = 'https://api.github.com/users/' + term + '?access_token=' + environment.apiKey;
+    let searchPoint = 'https://api.github.com/users/' + term + '?access_token=' ;
     let promise = new Promise<void>((resolve, reject) => {
       this.http.get<ApiResponse>(searchPoint).toPromise().then(
         (results) => {
@@ -54,7 +54,7 @@ export class GitsearchService {
       watchers_count: number,
       forks:number,
     }
-    let searchPoint = 'https://api.github.com/users/' + term + '/repos?access_token=' + environment.apiKey;
+    let searchPoint = 'https://api.github.com/users/' + term + '/repos?access_token=';
     let promise = new Promise<void>((resolve, reject) => {
       this.http.get<ApiResponse>(searchPoint).toPromise().then(
         (repoResults) => {

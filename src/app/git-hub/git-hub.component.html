@@ -11,19 +11,19 @@
        
     <div *ngIf="user" class="mt-1">
         <div class="card">
-            <div class="card-header">
-                <p>{{ user.name }}</p>
-            </div>
             <div class="card-body">
-                <div class="row">
+                <div class="row" style="height:auto;">
                     <div class="col-md-4">
-                        <img src="{{ user.avatar_url }}" class="img-fluid" alt="me" />
+                        <img src="{{ user.avatar_url }}" class="img-fluid" alt="me" style="height: 6cm;" />
                     </div>
                     <div class="col-md-8">
                         <br />
                         <ul class="list-group">
                             <li class="list-group-item">
                                 <strong>Username:</strong>{{ user.login }}
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Name:</strong>{{ user.name }}
                             </li>
                             <li class="list-group-item">
                                 <strong>Location:</strong>{{ user.location }}
@@ -50,18 +50,16 @@
         </div>
         <br />
         <div class="card">
-            <div class="card-header badge-secondary">
+            <div class="card-header text-black text-center">
                 <h2>Repositories</h2>
             </div>
-            <div class="card-body">
+            <div class="card-body ">
                 <div class="row">
                     <div class="col-md-12">
                         <div *ngFor="let repo of repositories">
                             <div class="row">
                                 <div class="card m-2" style="width: 100%;">
                                     <div class="card-body mycard">
-                                        <h5 appHighlight class="card-title">{{ repo.name }} Project</h5>
-                                        <p class="card-text"></p>
                                         <div class="col-md-9">
                                             <h4>{{ repo.name }}</h4>
                                             <p>{{ repo.description }}</p>
