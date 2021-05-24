@@ -13,7 +13,6 @@ export class GitHubComponent implements OnInit {
   user: Users;
   repositories: Repositories;
    
-
   constructor( public gitSearch: GitsearchService) { }
   searchUsers(term) {
     this.gitSearch.searchUsers(term).then(
@@ -33,7 +32,6 @@ export class GitHubComponent implements OnInit {
       }
     );
   }
-
   ngOnInit(): void {
     this.searchUsers('LornaMoringa');
   }
